@@ -8,6 +8,8 @@ const dbConfig = require("./config/database.config.js");
 const imageRoutes = require("./app/routes/image.route.js");
 const fileUpload = require("express-fileupload");
 app.use(fileUpload());
+var cors = require("cors");
+app.use(cors());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
