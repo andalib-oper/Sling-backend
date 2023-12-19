@@ -7,11 +7,10 @@ exports.addImage = (req, res) => {
   const imgPath = path.join(__dirname, `../../${path1}`); // Replace with your image path
   console.log("imagepath", imgPath);
   const imgData = fs.readFileSync(imgPath);
-  const encodedImage = imgData.toString("base64");
+  const encodedImage = imgData.toString('base64');
   const newImg = new Image({
     image: encodedImage,
   });
-  console.log("newImage", newImg)
   newImg
     .save()
     .then(() => {

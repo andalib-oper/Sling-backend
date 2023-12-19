@@ -3,9 +3,7 @@ var mongoose = require("mongoose"),
 
 
   var imageSchema = new Schema({
-    image: {
-      file: String,
-    },
+    image: String,
   });
 
   module.exports = mongoose.model("image", imageSchema);
