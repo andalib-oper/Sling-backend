@@ -1,13 +1,10 @@
 const Image = require("../model/image.model");
-const fs = require("fs");
-const path = require("path");
 
 exports.addImage = (req, res) => {
-  const path1 = req.file.path.replace(/\\/g, "/");
-  const imgPath = path.join(__dirname, `../../${path1}`); // Replace with your image path
-  console.log("imagepath", imgPath);
-  const imgData = fs.readFileSync(imgPath);
-  const encodedImage = imgData.toString('base64');
+  console.log("pathi1",req?.files?.file)
+  const path1 = req.files.file;
+  console.log("pathddfdf", path1)
+  const encodedImage = path1.data.toString('base64');
   const newImg = new Image({
     image: encodedImage,
   });

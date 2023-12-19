@@ -6,7 +6,8 @@ const bodyParser = require("body-parser");
 mongoose.Promise = global.Promise;
 const dbConfig = require("./config/database.config.js");
 const imageRoutes = require("./app/routes/image.route.js");
-
+const fileUpload = require("express-fileupload");
+app.use(fileUpload());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -34,7 +35,6 @@ app.get("/", (req, res) => {
 });
 app.use("/uploads", express.static("uploads"));
 app.use("/api", imageRoutes);
-
 app.listen(3005, () => {
   console.log("Server running on port 3005");
 });
