@@ -1,8 +1,6 @@
 // Express example for handling image upload
 const express = require("express");
 const app = express();
-const fs = require("fs");
-const path = require("path");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 mongoose.Promise = global.Promise;

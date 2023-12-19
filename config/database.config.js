@@ -1,4 +1,4 @@
 module.exports = {
-  url: 'mongodb://127.0.0.1:27017/Sling',
-  app_key: 'Sling-App-Key'
-  };
+  url: "https://sling-ylez.vercel.app/",
+  app_key: "Sling-App-Key",
+};
